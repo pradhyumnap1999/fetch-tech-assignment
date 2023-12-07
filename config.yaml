@@ -1,0 +1,56 @@
+- name: fetch.com home page
+  url: https://fetch.com/
+  method: GET
+
+- name: fetch.com careers page
+  url: https://fetch.com/careers
+  method: POST
+  headers:
+    Content-Type: application/json
+  body: '{"key1": "value1"}'
+
+- name: fetch.com endpoint page
+  url: https://fetch.com/some/post/endpoint
+  method: GET
+  headers:
+    Authorization: Bearer YOUR_TOKEN_HERE
+
+- name: www.fetchrewards.com index page
+  url: https://www.fetchrewards.com/
+  headers:
+    Content-Type: application/x-www-form-urlencoded
+  body: "key2=value2&key3=value3"
+
+- name: www.fetchrewards.com index page
+  url: https://www.fetchrewards.com/
+
+- name: ExampleEndpoint5
+  url: https://google.com
+  method: GET
+
+- name: ExampleEndpoint6
+  url: https://google.com/a
+  method: GET
+
+- headers:
+    user-agent: fetch-synthetic-monitor
+  method: GET
+  name: fetch.com index page
+  url: https://fetch.com/
+
+- headers:
+    user-agent: fetch-synthetic-monitor
+  method: GET
+  name: fetch.com careers page
+  url: https://fetch.com/careers
+
+- body: '{"foo":"bar"}'
+  headers:
+    content-type: application/json
+    user-agent: fetch-synthetic-monitor
+  method: POST
+  name: fetch.com some post endpoint
+  url: https://fetch.com/some/post/endpoint
+
+- name: www.fetchrewards.com index page
+  url: https://www.fetchrewards.com/
